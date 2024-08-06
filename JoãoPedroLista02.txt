@@ -1,0 +1,263 @@
+ Lista 2- Operações com decisão lógica
+
+Exercicio 01
+
+double n1, n2;
+
+ Console.WriteLine("Digite o primeiro valor:");
+ n1 = double.Parse(Console.ReadLine());
+ Console.WriteLine("Digite o segundo valor:");
+ n2 = double.Parse(Console.ReadLine());
+
+ if (n1 > n2)
+ {
+     Console.WriteLine("O primeiro valor é maior = {0}", n1);
+ }
+ else
+     Console.WriteLine("O segundo valor é maior = {0}", n2);
+
+
+Exercício 02
+
+
+double n1, n2;
+
+Console.WriteLine("Digite o primeiro valor:");
+n1 = double.Parse(Console.ReadLine());
+Console.WriteLine("Digite o segundo valor:");
+n2 = double.Parse(Console.ReadLine());
+
+
+
+
+
+if (n1 == n2)
+{ 
+    Console.WriteLine("Os valores são iguais");
+}
+else
+if (n1 > n2)
+{
+    Console.WriteLine("O primeiro valor é maior", n1);
+
+}
+else
+    Console.WriteLine("O segundo valor é maior", n2);
+
+
+
+Exercício 03
+
+
+            double n1, n2, n3;
+
+            Console.WriteLine("Digite o primeiro valor:");
+            n1 = double.Parse(Console.ReadLine());
+
+            Console.WriteLine("Digite o ssegundo valor:");
+            n2 = double.Parse(Console.ReadLine());
+
+            Console.WriteLine("Digite o terceiro valor:");
+            n3 = double.Parse(Console.ReadLine());
+
+
+            if (n1 > n2 && n1 > n3)
+            {
+                Console.WriteLine("O primeiro valor é maior", n1);
+            }
+            else if (n2 > n1 && n2 > n3)
+                Console.WriteLine("O segundo valor é maior", n2);
+            else if (n3 > n1 && n3 > n2)
+                Console.WriteLine("O terceiro valor é maior", n3);
+            else if (n1 == n2)
+                Console.WriteLine("Os maiores valores são o primeiro e o segundo");
+            else if (n1 == n3)
+                Console.WriteLine("Os maiores valores são o primeiro e o terceiro");
+            else if (n2 == n3)
+                Console.WriteLine("Os maiores valores são o segundo e o terceiro");
+
+            Console.ReadKey();
+
+
+
+
+Exercício 04 
+double baseR, alturaR, areaR;
+
+Console.WriteLine("Digite o valor da base do retângulo:");
+baseR = double.Parse(Console.ReadLine());
+Console.WriteLine("Digite o valor da altura do retângul:");
+alturaR = double.Parse(Console.ReadLine());
+
+areaR = baseR * alturaR;
+
+Console.WriteLine("O valor da área é:" + areaR);
+
+if (areaR > 100) ;
+
+Console.WriteLine("Terreno Grande");
+
+Console.ReadKey();
+
+Exercício 05
+
+
+   
+            double baseR, alturaR, areaR;
+
+            Console.WriteLine("Digite o valor da base do retângulo:");
+            baseR = double.Parse(Console.ReadLine());
+            Console.WriteLine("Digite o valor da altura do retângul:");
+            alturaR = double.Parse(Console.ReadLine());
+
+            areaR = baseR * alturaR;
+
+            Console.WriteLine("O valor da área é:" + areaR);
+
+            if (areaR > 100)
+                Console.WriteLine("Terreno Grande");
+            else
+                Console.WriteLine("Terreno Pequeno");
+
+Exercício 06
+
+
+            double peso, altura, IMC;
+
+            Console.WriteLine("Digite seu peso (em kg):");
+            peso = double.Parse(Console.ReadLine());
+
+            Console.WriteLine("Digite a sua altura (em metros):");
+            altura = double.Parse(Console.ReadLine());
+
+            IMC = peso / (altura * altura);
+
+
+            if (IMC > 20) ;
+            else
+            Console.WriteLine("Abaixo do Peso");
+             if (IMC >= 20 && IMC < 25)
+                  if (IMC >= 25) ;
+                   else
+                    Console.WriteLine("Acima do Peso");
+                 else
+                  Console.WriteLine("Peso Ideal"); 
+
+Exercício 07 
+
+
+double a, b, c;
+
+Console.WriteLine("Digite o valor do lado 1:");
+a = double.Parse(Console.ReadLine());
+Console.WriteLine("Digite o valor do lado 2:");
+b = double.Parse(Console.ReadLine());
+Console.WriteLine("Digite o valor do lado 3 :");
+c = double.Parse(Console.ReadLine());
+
+if (a + b > c)
+    if (a + c > b)
+        if (b + c > a)
+            if (a == b)
+                if (a == c)
+                    Console.WriteLine("Equilátero");
+                else
+                    Console.WriteLine("Isósceles");
+            else
+                if (b == c)
+                Console.WriteLine("Isósceles");
+            else
+                   if (a == c)
+                Console.WriteLine("Isósceles");
+            else
+                Console.WriteLine("Escaleno");
+        else
+            Console.WriteLine("Não forma triângulo");
+    else
+        Console.WriteLine("Não forma triângulo");
+else
+    Console.WriteLine("Não forma triângulo");
+
+Exercício 08
+ 
+
+ double ladoA, ladoB, ladoC;
+
+ Console.WriteLine("Digite os valores dos lados A, B e C do triângulo:");
+ Console.WriteLine("Lado A:"); 
+ ladoA = double.Parse(Console.ReadLine());
+ Console.WriteLine("Lado B:"); 
+ ladoB = double.Parse(Console.ReadLine());
+ Console.WriteLine("Lado C:"); 
+ ladoC = double.Parse(Console.ReadLine());
+
+ if (Math.Pow(ladoA, 2) + Math.Pow(ladoB, 2) == Math.Pow(ladoC, 2))
+     Console.WriteLine("Os valores formam um triângulo retângulo");
+
+ else 
+     Console.WriteLine("Os valores não formam um triângulo retângulo.");
+
+Exercício 09
+
+
+double peso, altura, IMC;
+
+
+Console.WriteLine("Digite o seu peso (em kg):");
+peso = double.Parse(Console.ReadLine());
+Console.WriteLine("Digite sua altura (em metros):");
+altura = double.Parse(Console.ReadLine());
+Console.WriteLine("Digite seu sexo (M/F):");
+char sexo = Convert.ToChar(Console.ReadLine().ToUpper());
+
+
+IMC = peso * (altura * altura);
+
+
+
+if (sexo == 'M')
+{
+    if (IMC < 20)
+     Console.WriteLine("Abaixo do peso");
+    
+    else if (IMC < 25)
+    Console.WriteLine("Peso ideal");
+    
+    else
+    Console.WriteLine("Acima do peso");
+    
+}
+if (sexo == 'F')
+{
+    if (IMC < 19)
+     Console.WriteLine("Abaixo do peso");
+        
+    else if (IMC < 24)
+        Console.WriteLine("Peso ideal");
+     
+    else
+       Console.WriteLine("Acima do peso");
+    
+}
+
+
+Exercício 10
+ 
+double nota1, nota2, média;
+
+ Console.WriteLine("Digite a sua primeira nota:");
+ nota1 = double.Parse(Console.ReadLine());
+ Console.WriteLine("Digite a sua segunda nota:");
+ nota2 = double.Parse(Console.ReadLine());
+
+ média = (nota1 + 2 * nota2) / 3;
+
+ Console.WriteLine("NOTA:" + média);
+
+ if (média >= 5) 
+  Console.WriteLine("Situação: Aprovado");
+      else
+     Console.WriteLine("Situação: Reprovado");
+            
+
+
